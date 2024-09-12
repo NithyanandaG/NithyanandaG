@@ -1,0 +1,40 @@
+#include <stdio.h>
+int main() {
+    int table[3][3]={{1,0,1},{0,1,0},{1,0,1}};
+    int dup[3][3]={{1,0,1},{0,1,0},{1,0,1}};
+    int temporary[3][3]={0};
+    int i,j,sum=0,flag,temp,temp1;
+    // for(i=0;i<3;i++){
+    //     for(j=0;j<3;j++){
+    //         printf("Enter table[%d][%d] element:",i,j);
+    //         scanf("%d",&table[i][j]);
+    //     }
+    // }
+    printf("Given Table1  is: \n");
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            printf(" %d ",table[i][j]);
+        }
+        printf("\n");
+    }
+    printf("Given Table 2 is: \n");
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            printf(" %d ",dup[i][j]);
+        }
+        printf("\n");
+    }
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            for(int k=0;k<3;k++){
+	            temporary[i][j]+=table[i][k]*dup[k][j];
+}
+}
+}
+printf("Multiplied Matrix is: \n");
+for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            printf(" %d ",temporary[i][j]);
+        }
+        printf("\n");
+    }}
