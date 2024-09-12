@@ -1,0 +1,50 @@
+
+#include <stdio.h>
+int main() {
+    int table[3][3]={{23,34,56},{12,11,23},{41,21,11}};
+    int final[4][4]={0};
+    int i,j,k=3,flag,temp,temp1;
+    // for(i=0;i<3;i++){
+    //     for(j=0;j<3;j++){
+    //         printf("Enter table[%d][%d] element:",i,j);
+    //         scanf("%d",&table[i][j]);
+    //     }
+    // }
+    printf("Given Table1  is: \n");
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            printf(" %d ",table[i][j]);
+        }
+        printf("\n");
+    }
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            final[i][j]=table[i][j];
+        }
+    }
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+        final[i][k]+=table[i][j];
+    }
+}
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            final[k][i]+=table[j][i];
+        }
+        }
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            if(i==j){
+                final[k][k]+=table[i][j];
+            }
+        }
+    }
+printf("Final Matrix is: \n");
+for(i=0;i<4;i++){
+        for(j=0;j<4;j++){
+            printf(" %d ",final[i][j]);
+        }
+        printf("\n");
+    }
+    
+}
